@@ -398,3 +398,4 @@ ja:
   inactive_users: "最近活動の無いユーザー (%{count})"
   action: 操作
   order: 並び順
+  q_and_a: "Q & A"

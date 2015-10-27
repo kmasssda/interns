@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     resource :learning, only: %i(create update destroy)
     resource :position, only: %i(update)
   end
+  resources :questions do
+    resources :answers
+  end
   resources :courses, only: :index
   resources :chat_notices, only: :create
   get 'login'  => 'user_sessions#new',     as: :login
