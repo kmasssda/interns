@@ -4,7 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.belongs_to :user, index: true
-      t.belongs_to :answer, index: true
+      t.boolean :resolve
 
       t.timestamps
     end

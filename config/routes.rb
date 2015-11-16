@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :questions
+
   root to: 'home#index'
   namespace :admin do
     root to: 'home#index'

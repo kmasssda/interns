@@ -61,7 +61,7 @@ class UsersController < ApplicationController
 
   def destroy
     current_user.destroy
-    redirect_to users_url, notice: t('user_was_successfully_deleted')
+    redirect_to users_url, notice: t('user_was_successfully_destroyed')
   end
 
   private

@@ -4,10 +4,10 @@ one:
   title: MyString
   description: MyText
   user_id: 
-  answer_id: 
+  resolve: false
 
 two:
   title: MyString
   description: MyText
   user_id: 
-  answer_id: 
+  resolve: false

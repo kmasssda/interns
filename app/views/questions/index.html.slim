@@ -1,27 +1,8 @@
-h1 Listing questions
-
-table
-  thead
+h3= t('listing_questions')
+table.table
+  - @questions.each do |question|
     tr
-      th Title
-      th Description
-      th User
-      th Answer
-      th
-      th
-      th
+      td.title= link_to question.title, question
+      td.user= question.user.login_name
 
-  tbody
-    - @questions.each do |question|
-      tr
-        td = question.title
-        td = question.description
-        td = question.user
-        td = question.answer
-        td = link_to 'Show', question
-        td = link_to 'Edit', edit_question_path(question)
-        td = link_to 'Destroy', question, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New Question', new_question_path
+= link_to t('new_question'), new_question_path

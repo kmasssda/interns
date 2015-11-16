@@ -49,7 +49,7 @@ class PracticesController < ApplicationController
     notify "<#{url_for(current_user)}|#{current_user.login_name}>が<#{url_for(@practice)}|#{@practice.title}>を削除しました。",
       username: "#{current_user.login_name}@256interns.com",
       icon_url: gravatar_url(current_user)
-    redirect_to practices_url, notice: t('practice_was_successfully_deleted')
+    redirect_to practices_url, notice: t('practice_was_successfully_destroyed')
   end
 
   private

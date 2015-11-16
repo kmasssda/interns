@@ -1,0 +1,9 @@
+answer_1:
+  id: 1
+  description: atom一択です！
+  user_id: 1
+
+answer_2:
+  id: 2
+  description: injectを使っては？
+  user_id: 1

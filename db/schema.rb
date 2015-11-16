@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027142804) do
+ActiveRecord::Schema.define(version: 20151116092119) do
 
   create_table "answers", force: true do |t|
     t.text     "description"
@@ -66,12 +66,11 @@ ActiveRecord::Schema.define(version: 20151027142804) do
     t.string   "title"
     t.text     "description"
     t.integer  "user_id"
-    t.integer  "answer_id"
+    t.boolean  "resolve"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "questions", ["answer_id"], name: "index_questions_on_answer_id"
   add_index "questions", ["user_id"], name: "index_questions_on_user_id"
 
   create_table "users", force: true do |t|
