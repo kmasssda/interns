@@ -1,8 +1,12 @@
 h3= t('listing_questions')
-table.table
+ul.nav.nav-pills
+  li(class="#{params[:solved].present? ? '' : 'active'}")= link_to t('unsolved'), questions_path
+  li(class="#{params[:solved].present? ? 'active' : ''}")= link_to t('solved'), questions_path(solved: true)
+ul.questions.list-unstyled
   - @questions.each do |question|
-    tr
-      td.title= link_to question.title, question
-      td.user= question.user.login_name
-
-= link_to t('new_question'), new_question_path
+    li
+      .title= link_to question.title, question
+      .user
+        .icon= link_to gravatar_tag(question.user), question.user
+        .name= link_to question.user.login_name, question.user
+= link_to t('new_question'), new_question_path, class: 'btn btn-success'

@@ -1,18 +1,13 @@
-p#notice = notice
-
-p
-  strong Title:
-  = @question.title
-p
-  strong Description:
-  = @question.description
-p
-  strong User:
-  = @question.user
-p
-  strong Resolve:
-  = @question.resolve
-
-= link_to 'Edit', edit_question_path(@question)
-'|
-= link_to 'Back', questions_path
+h3= @question.title
+.description= raw rendering(@question.description)
+.user
+  .icon= gravatar_tag @question.user
+  .name= @question.user.login_name
+.created_at= l @question.created_at
+p= link_to t('edit'), edit_question_path(@question), class: 'btn btn-success'
+- if @question.answers.present?
+  .answers
+    - @question.answers.each do |answer|
+      = render 'answers/answer', answer: answer
+- else 
+  p= t('no_answer')

@@ -281,6 +281,10 @@ ja:
         slug: URLスラッグ
         description: 詳細
 
+      question:
+        title: タイトル
+        description: 詳細
+
     errors:
       template:
         header:
@@ -355,7 +359,10 @@ ja:
   editing_company: "会社編集"
   editing_user: "アカウント情報編集"
   editing_category: "カテゴリー編集"
+  editing_question: 質問編集
+  editing_answer: 回答編集
   new_category: "カテゴリー追加"
+  new_question: "質問追加"
   show: "表示"
   back: "戻る"
   "bob's_practices": "%{name}のプラクティス"
@@ -404,3 +411,5 @@ ja:
   q_and_a: "Q & A"
   action: 操作
   order: 並び順
+  solved: 解決済み
+  unsolved: 未解決

@@ -1,0 +1,6 @@
+.answer
+  .description= raw rendering(answer.description)
+  .user
+    .icon= gravatar_tag answer.user
+    .name= answer.user.login_name
+  .created_at= l answer.created_at

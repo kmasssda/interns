@@ -2,7 +2,12 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: %i(show edit update destroy)
 
   def index
-    @questions = Question.all
+    @questions =
+      if params[:solved].present?
+        Question.solved
+      else
+        Question.unsolved
+      end
   end
 
   def show

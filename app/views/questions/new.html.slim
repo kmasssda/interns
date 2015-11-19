@@ -1,5 +1,2 @@
-h1 New question
-
-== render 'form'
-
-= link_to 'Back', questions_path
+h3= t('new_question')
+= render 'form', question: @question

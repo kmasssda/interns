@@ -2,8 +2,16 @@ answer_1:
   id: 1
   description: atom一択です！
   user_id: 1
+  question_id: 1
 
 answer_2:
   id: 2
+  description: vimしかないでしょう。常識的に考えて。
+  user_id: 3
+  question_id: 1
+
+answer_3:
+  id: 3
   description: injectを使っては？
   user_id: 1
+  question_id: 2
